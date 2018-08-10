@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  RxAlamoRecord
-//
-//  Created by Daltron on 08/05/2018.
-//  Copyright (c) 2018 Daltron. All rights reserved.
-//
 
 import UIKit
 
@@ -15,7 +8,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: PostsViewController())
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
