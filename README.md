@@ -44,9 +44,9 @@ let posts = AlamoRecordRelay<[Post]>(value: [])
 let post = AlamoRecordRelay<Post?>(value: nil)
 
 lazy var failureAction: Action<ApplicationError, Swift.Never> = {
-	return Action { [weak self] error in
-   		// Do something with the error
-    	return Observable.empty()
+    return Action { [weak self] error in
+        // Do something with the error
+        return Observable.empty()
     }
 }()
 
@@ -58,10 +58,10 @@ lazy var failureAction: Action<ApplicationError, Swift.Never> = {
 
 ```swift
 Post.rx
-	.all() 
-	.execute()
-   	.bind(to: posts, failure: failureAction)
-   	.disposed(by: disposeBag)
+    .all() 
+    .execute()
+    .bind(to: posts, failure: failureAction)
+    .disposed(by: disposeBag)
 ```
 
 ### Creating an instance of `Post`
@@ -70,11 +70,11 @@ Post.rx
 
 ```swift
 Post.rx
-	.create()
-	.withParameters(["userId": userId, "title": title, "body": body]) 
-	.execute()
-   	.bind(to: post, failure: failureAction)
-   	.disposed(by: disposeBag)
+    .create()
+    .withParameters(["userId": userId, "title": title, "body": body]) 
+    .execute()
+    .bind(to: post, failure: failureAction)
+    .disposed(by: disposeBag)
 ```
 
 ### Finding an instance of `Post`
@@ -83,10 +83,10 @@ Post.rx
 
 ```swift
 Post.rx
-	.find(id: 1)
-	.execute()
-   	.bind(to: post, failure: failureAction)
-   	.disposed(by: disposeBag)
+    .find(id: 1)
+    .execute()
+    .bind(to: post, failure: failureAction)
+    .disposed(by: disposeBag)
 ```
 
 ### Updating an instance of `Post`
@@ -95,22 +95,22 @@ Post.rx
 
 ```swift
 post.value?
-	.rx
-	.update()
-	.withParameters(["userId": userId, "title": title, "body": body])
-	.execute()
-	.bind(to: post, failure: failureAction)
-	.disposed(by: disposeBag)
+    .rx
+    .update()
+    .withParameters(["userId": userId, "title": title, "body": body])
+    .execute()
+    .bind(to: post, failure: failureAction)
+    .disposed(by: disposeBag)
 ```
 This can also be done at the class level:
 
 ```swift
 Post.rx
-	.update(id: 1)
-	.withParameters(["userId": userId, "title": title, "body": body])
-	.execute()
-	.bind(to: post, failure: failureAction)
-	.disposed(by: disposeBag)
+    .update(id: 1)
+    .withParameters(["userId": userId, "title": title, "body": body])
+    .execute()
+    .bind(to: post, failure: failureAction)
+    .disposed(by: disposeBag)
 ```
 
 ### Destroying an instance of `Post`
@@ -120,18 +120,18 @@ Post.rx
 ```swift
 
 lazy var destroyedAction: Action<Void, Swift.Never> = {
-	return Action { [weak self] in
-		// The post is now destroyed
-		return Observable.empty()
-	}
+    return Action { [weak self] in
+        // The post is now destroyed
+	return Observable.empty()
+    }
 }()
 
 post.value?
-	.rx
-	.destroy()
-	.execute()
-	.bind(to: destroyedAction, failure: failureAction)
-	.disposed(by: disposeBag)
+    .rx	
+    .destroy()
+    .execute()
+    .bind(to: destroyedAction, failure: failureAction)
+    .disposed(by: disposeBag)
 ```
 This can also be done at the class level:
 
@@ -151,27 +151,27 @@ It is also possible to assign a default value to an AlamoRecordRelay/Action obje
 let postTitle = AlamoRecordRelay<String?>(value: nil)
 
 Post.rx
-	.find(id: 1)
-	.execute()
-	.map { $0.title }
-	.bind(to: postTitle, valueOnFailure: "Default Title")
-	.disposed(by: disposeBag)
+    .find(id: 1)
+    .execute()
+    .map { $0.title }
+    .bind(to: postTitle, valueOnFailure: "Default Title")
+    .disposed(by: disposeBag)
 ```
 
 ```swift
 lazy var postTitleAction: Action<String, Swift.Never> = {
-	return Action { [weak self] title in
-		// Do something with the title
-		return Observable.empty()
-	}
+    return Action { [weak self] title in
+        // Do something with the title
+        return Observable.empty()
+    }
 }()
 
 Post.rx
-	.find(id: 1)
-	.execute()
-	.map { $0.title }
-	.bind(to: postTitleAction, valueOnFailure: "Default Title")
-	.disposed(by: disposeBag)
+    .find(id: 1)
+    .execute()
+    .map { $0.title }
+    .bind(to: postTitleAction, valueOnFailure: "Default Title")
+    .disposed(by: disposeBag)
 ```
 
 #### Download the example project to see just how easy creating an application with a reactive networking layer is when using RxAlamoRecord!
