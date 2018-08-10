@@ -2,10 +2,7 @@ use_frameworks!
 
 target 'RxAlamoRecord_Example' do
   pod 'RxAlamoRecord', :path => '../'
-
-  target 'RxAlamoRecord_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'SnapKit'
+  pod 'NotificationBannerSwift'
+  pod 'KeyboardSpy'
 end
