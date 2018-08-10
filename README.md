@@ -1,4 +1,4 @@
-![RxAlamoRecord](/Users/Dalton/Documents/Development/iOS/RxAlamoRecord/RxAlamoRecord/Assets/rx_alamorecord.png)
+![RxAlamoRecord](https://github.com/Daltron/RxAlamoRecord/blob/master/RxAlamoRecord/Assets/rx_alamorecord.png?raw=true)
 
 [![Version](https://img.shields.io/cocoapods/v/RxAlamoRecord.svg?style=flat)](http://cocoapods.org/pods/RxAlamoRecord)
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift-4.1-4BC51D.svg?style=flat" alt="Language: Swift" /></a>
