@@ -1,8 +1,16 @@
 use_frameworks!
 
-target 'RxAlamoRecord_Example' do
+def shared_pods
   pod 'RxAlamoRecord', :path => '../'
+end
+
+target 'RxAlamoRecord_Example' do
+  shared_pods
   pod 'SnapKit'
   pod 'NotificationBannerSwift'
   pod 'KeyboardSpy'
+end
+
+target 'RxAlamoRecordTests' do
+  shared_pods
 end

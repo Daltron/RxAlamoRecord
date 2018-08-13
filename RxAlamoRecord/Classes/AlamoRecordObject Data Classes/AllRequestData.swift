@@ -20,7 +20,7 @@ import Alamofire
 import AlamoRecord
 import RxSwift
 
-public class AllRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, T:AlamoRecordObject<U, E>>: AlamoRecordObjectRequestData<U, E, T> {
+public class AllRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, T: AlamoRecordObject<U, E>>: AlamoRecordObjectRequestData<U, E, T> {
 
     /**
         Executes the request immediately.
