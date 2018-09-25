@@ -1,28 +1,28 @@
 PODS:
-  - Action (3.6.0):
-    - RxCocoa (~> 4.2.0)
-    - RxSwift (~> 4.2.0)
+  - Action (3.8.0):
+    - RxCocoa (~> 4.3.0)
+    - RxSwift (~> 4.3.0)
   - Alamofire (4.7.3)
   - AlamofireObjectMapper (5.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.3)
-  - AlamoRecord (1.2.2):
+  - AlamoRecord (1.3.0):
     - AlamofireObjectMapper (~> 5.1)
   - KeyboardSpy (1.1)
-  - MarqueeLabel/Swift (3.1.6)
-  - NotificationBannerSwift (1.6.3):
-    - MarqueeLabel/Swift
-    - SnapKit (~> 4.0)
+  - MarqueeLabel/Swift (3.2.0)
+  - NotificationBannerSwift (1.7.1):
+    - MarqueeLabel/Swift (~> 3.2.0)
+    - SnapKit (~> 4.0.1)
   - ObjectMapper (3.3.0)
-  - RxAlamoRecord (1.0.0):
-    - Action (~> 3.6.0)
-    - AlamoRecord (~> 1.2.1)
-    - RxCocoa (~> 4.2.0)
-    - RxSwift (~> 4.2.0)
-  - RxCocoa (4.2.0):
+  - RxAlamoRecord (1.1.0):
+    - Action (~> 3.8.0)
+    - AlamoRecord (~> 1.3.0)
+    - RxCocoa (~> 4.3.1)
+    - RxSwift (~> 4.3.1)
+  - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
-  - RxSwift (4.2.0)
-  - SnapKit (4.0.0)
+  - RxSwift (4.3.1)
+  - SnapKit (4.0.1)
 
 DEPENDENCIES:
   - KeyboardSpy
@@ -30,24 +30,38 @@ DEPENDENCIES:
   - RxAlamoRecord (from `../`)
   - SnapKit
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Action
+    - Alamofire
+    - AlamofireObjectMapper
+    - AlamoRecord
+    - KeyboardSpy
+    - MarqueeLabel
+    - NotificationBannerSwift
+    - ObjectMapper
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+
 EXTERNAL SOURCES:
   RxAlamoRecord:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Action: 3d9486d3da02b572b0a034b6c49ac4c3fbcc8b63
+  Action: 2275d04a407ecaf46a58d58a304388a28155a0a1
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
-  AlamoRecord: 5850c563a811fdca40cd361b1b27622004bccef3
+  AlamoRecord: 55b4ce7f39214f45484c17ff8a7e8b2fa884e732
   KeyboardSpy: 4552ddd413d3b856b3b396422fccb8e1b3008524
-  MarqueeLabel: 0c41f08ef5773e29c0f71064a8fa788a2fd8b365
-  NotificationBannerSwift: b231e4c3244848ef300e1c53ce027b9756b9b06f
+  MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
+  NotificationBannerSwift: 5d0191ae57c4b38e484dab4912e32d1ed99fce61
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  RxAlamoRecord: f0a1ee9e619984c7c415f9cc2b2a757623e0a5df
-  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
-  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  RxAlamoRecord: 93e281f798a3c64789a6d30be78ab11704e9dc50
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
 PODFILE CHECKSUM: 3cf57a5b93d42bf12f818145ef7bc5902d000a59
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.0.beta.1

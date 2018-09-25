@@ -1,7 +1,7 @@
 /*
  
  The MIT License (MIT)
- Copyright (c) 2017 Dalton Hinterscher
+ Copyright (c) 2017-2018 Dalton Hinterscher
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
  to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -30,7 +30,7 @@ public class StatusBarNotificationBanner: BaseNotificationBanner {
         get {
             if let customBannerHeight = customBannerHeight {
                 return customBannerHeight
-            } else if shouldAdjustForIphoneX() {
+            } else if shouldAdjustForNotchFeaturedIphone() {
                 return 50.0
             } else {
                 return 20.0

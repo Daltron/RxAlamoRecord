@@ -13,11 +13,11 @@ class PostsView: UIView {
         tableView = UITableView(frame: .zero, style: .plain)
         tableView.backgroundColor = .darkWhite
         tableView.separatorStyle = .none
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50.0
         tableView.dataSource = tableViewHelper
         tableView.delegate = tableViewHelper
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0)
+        tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 10, right: 0)
         tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.reuseIdentifier)
         addSubview(tableView)
         

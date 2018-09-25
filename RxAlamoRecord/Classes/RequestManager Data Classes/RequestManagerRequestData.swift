@@ -19,9 +19,9 @@
 import Alamofire
 import AlamoRecord
 
-public class RequestManagerRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError>: BaseRequestData<U, E> {
+public class RequestManagerRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, IDType>: BaseRequestData<U, E> {
 
-    internal typealias Data = (requestManager: RequestManager<U, E>,
+    internal typealias Data = (requestManager: RequestManager<U, E, IDType>,
         method: Alamofire.HTTPMethod,
         url: U,
         parameters: Parameters?,
@@ -34,13 +34,13 @@ public class RequestManagerRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecor
         return (requestManager, method, url, parameters, encoding, headers, keyPath, emptyBody)
     }
     
-    internal let requestManager: RequestManager<U, E>
+    internal let requestManager: RequestManager<U, E, IDType>
     internal let method: Alamofire.HTTPMethod
     internal let url: U
     internal var keyPath: String?
     internal var emptyBody: Bool = false
     
-    init(requestManager: RequestManager<U, E>, method: Alamofire.HTTPMethod, url: U) {
+    init(requestManager: RequestManager<U, E, IDType>, method: Alamofire.HTTPMethod, url: U) {
         self.requestManager = requestManager
         self.method = method
         self.url = url

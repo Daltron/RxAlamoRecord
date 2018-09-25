@@ -19,7 +19,7 @@
 import AlamoRecord
 import RxSwift
 
-public class RequestManagerMakeRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError>: RequestManagerRequestData<U, E> {
+public class RequestManagerMakeRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
     
     public func execute() -> Observable<Void> {
         

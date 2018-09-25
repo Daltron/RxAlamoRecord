@@ -1,11 +1,11 @@
 ![RxAlamoRecord](https://github.com/Daltron/RxAlamoRecord/blob/master/RxAlamoRecord/Assets/rx_alamorecord.png?raw=true)
 
 [![Version](https://img.shields.io/cocoapods/v/RxAlamoRecord.svg?style=flat)](http://cocoapods.org/pods/RxAlamoRecord)
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift-4.1-4BC51D.svg?style=flat" alt="Language: Swift" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift-4.2-4BC51D.svg?style=flat" alt="Language: Swift" /></a>
 [![Platform](https://img.shields.io/cocoapods/p/RxAlamoRecord.svg?style=flat)](http://cocoapods.org/pods/RxAlamoRecord)
 [![License](https://img.shields.io/cocoapods/l/RxAlamoRecord.svg?style=flat)](http://cocoapods.org/pods/RxAlamoRecord)
 
-## Written in Swift 4.1
+## Written in Swift 4.2
 
 RxAlamoRecord combines the power of the [AlamoRecord](https://github.com/tunespeak/AlamoRecord) and [RxSwift](https://github.com/ReactiveX/RxSwift) libraries to create a networking layer that makes interacting with API's easier than ever reactively.
 
@@ -13,12 +13,12 @@ RxAlamoRecord combines the power of the [AlamoRecord](https://github.com/tunespe
 ## Requirements
 
 - iOS 9.0+ / macOS 10.11+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 9.0+
-- Swift 4.1+
+- Xcode 10.0+
+- Swift 4.2+
 
 ## Installation
 
-AlamoRecord is available through [CocoaPods](http://cocoapods.org). To install
+RxAlamoRecord is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby

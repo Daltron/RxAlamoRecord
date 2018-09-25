@@ -7,7 +7,7 @@ class CommentCell: BaseTableViewCell {
     private var emailLabel: UILabel!
     private var bodyLabel: UILabel!
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none

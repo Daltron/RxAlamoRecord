@@ -30,8 +30,8 @@ public extension Reactive {
         - parameter method: The HTTP method
         - parameter url: The URL that conforms to URLProtocol
      */
-    public func makeRequest<U, E>(_ method: Alamofire.HTTPMethod,
-                                  url: U) -> RequestManagerMakeRequestData<U, E> where Base: RequestManager<U, E> {
+    public func makeRequest<U, E, IDType>(_ method: Alamofire.HTTPMethod,
+                                  url: U) -> RequestManagerMakeRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMakeRequestData(requestManager: base, method: method, url: url)
     }
     
@@ -40,8 +40,8 @@ public extension Reactive {
         - parameter method: The HTTP method
         - parameter url: The URL that conforms to URLProtocol
      */
-    public func mapObject<U, E>(_ method: Alamofire.HTTPMethod,
-                                url: U) -> RequestManagerMapObjectRequestData<U, E> where Base: RequestManager<U, E> {
+    public func mapObject<U, E, IDType>(_ method: Alamofire.HTTPMethod,
+                                url: U) -> RequestManagerMapObjectRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMapObjectRequestData(requestManager: base, method: method, url: url)
     }
     
@@ -50,8 +50,8 @@ public extension Reactive {
         - parameter method: The HTTP method
         - parameter url: The URL that conforms to URLProtocol
      */
-    public func mapObjects<U, E>(_ method: Alamofire.HTTPMethod,
-                                 url: U) -> RequestManagerMapObjectsRequestData<U, E> where Base: RequestManager<U, E> {
+    public func mapObjects<U, E, IDType>(_ method: Alamofire.HTTPMethod,
+                                 url: U) -> RequestManagerMapObjectsRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMapObjectsRequestData(requestManager: base, method: method, url: url)
     }
 }
