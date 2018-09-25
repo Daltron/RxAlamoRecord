@@ -1,7 +1,7 @@
 {
   "name": "RxAlamoRecord",
   "version": "1.1.0",
-  "summary": "A short description of RxAlamoRecord.",
+  "summary": "RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to create a networking layer that makes interacting with API's easier than ever reactively.",
   "description": "RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to create a networking layer that makes interacting with API's easier than ever reactively.",
   "homepage": "https://github.com/Daltron/RxAlamoRecord",
   "license": {

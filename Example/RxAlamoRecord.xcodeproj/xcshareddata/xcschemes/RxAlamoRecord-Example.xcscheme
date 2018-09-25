@@ -52,6 +52,26 @@
                ReferencedContainer = "container:RxAlamoRecord.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5CAE0F8621211565002C9E3D"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
+               ReferencedContainer = "container:RxAlamoRecord.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5CAE0FAA21211A5A002C9E3D"
+               BuildableName = "RxAlamoRecordTests.xctest"
+               BlueprintName = "RxAlamoRecordTests"
+               ReferencedContainer = "container:RxAlamoRecord.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

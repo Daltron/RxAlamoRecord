@@ -37,7 +37,7 @@ RxAlamoRecord gives you the power to bind your API reponses directly to `AlamoRe
 
 This object behaves exactly the same as a [BehaviorRelay](https://github.com/ReactiveX/RxSwift/blob/4431b623751ac5525e8a8c2d6e82f29b983af07c/RxCocoa/Traits/BehaviorRelay.swift) except that an `AlamoRecordRelay` can emit an error. It is required to use an instance of an `AlamoRecordRelay` when binding via RxAlamoRecord or else your app will crash if the API request returns an error or fails.
 
-#####To help simplify the examples, assume these variables are included in each one:
+##### To help simplify the examples, assume these variables are included in each one:
 
 ```swift
 let posts = AlamoRecordRelay<[Post]>(value: [])

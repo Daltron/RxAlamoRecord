@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
   s.name             = 'RxAlamoRecord'
   s.version          = '1.1.0'
-  s.summary          = 'RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to create a networking layer that makes interacting with API\'s easier than ever reactively.'
+  s.summary          = 'An elegant Reactive wrapper around AlamoRecord.'
 
   s.description      = <<-DESC
 RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to create a networking layer that makes interacting with API's easier than ever reactively.
