@@ -22,7 +22,7 @@ import AlamoRecord
 import RxSwift
 import RxCocoa
 
-public class FindRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, IDType, T:AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
+public class FindRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T:AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
 
     let id: IDType
     

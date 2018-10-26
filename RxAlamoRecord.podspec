@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxAlamoRecord'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'An elegant Reactive wrapper around AlamoRecord.'
 
   s.description      = <<-DESC
@@ -22,7 +22,7 @@ RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to cre
   s.source_files = 'RxAlamoRecord/Classes/**/*'
   s.requires_arc = true
 
-  s.dependency 'AlamoRecord', '~> 1.3.0'
+  s.dependency 'AlamoRecord', '~> 1.3.1'
   s.dependency 'RxSwift', '~> 4.3.1'
   s.dependency 'RxCocoa', '~> 4.3.1'
   s.dependency 'Action', '~> 3.8.0'

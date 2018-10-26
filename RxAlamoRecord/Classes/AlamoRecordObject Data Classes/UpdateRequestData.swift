@@ -20,7 +20,7 @@ import Alamofire
 import AlamoRecord
 import RxSwift
 
-public class UpdateRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, IDType, T: AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
+public class UpdateRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T: AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
 
     let id: IDType
     let type: AlamoRecordObject<U, E, IDType>.Type

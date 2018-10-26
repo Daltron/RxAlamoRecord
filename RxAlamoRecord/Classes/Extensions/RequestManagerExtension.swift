@@ -20,7 +20,7 @@ import Alamofire
 import AlamoRecord
 import RxSwift
 
-private typealias U = AlamoRecord.URLProtocol
+private typealias U = AlamoRecordURL
 private typealias E = AlamoRecordError
 
 public extension Reactive {
@@ -28,7 +28,7 @@ public extension Reactive {
     /**
         Creates request data for the requestManager.makeRequest() request that is to be executed.
         - parameter method: The HTTP method
-        - parameter url: The URL that conforms to URLProtocol
+        - parameter url: The URL that conforms to AlamoRecordURL
      */
     public func makeRequest<U, E, IDType>(_ method: Alamofire.HTTPMethod,
                                   url: U) -> RequestManagerMakeRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
@@ -38,7 +38,7 @@ public extension Reactive {
     /**
         Creates request data for the requestManager.mapObject() request that is to be executed.
         - parameter method: The HTTP method
-        - parameter url: The URL that conforms to URLProtocol
+        - parameter url: The URL that conforms to AlamoRecordURL
      */
     public func mapObject<U, E, IDType>(_ method: Alamofire.HTTPMethod,
                                 url: U) -> RequestManagerMapObjectRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
@@ -48,7 +48,7 @@ public extension Reactive {
     /**
         Creates request data for the requestManager.mapObjects() request that is to be executed.
         - parameter method: The HTTP method
-        - parameter url: The URL that conforms to URLProtocol
+        - parameter url: The URL that conforms to AlamoRecordURL
      */
     public func mapObjects<U, E, IDType>(_ method: Alamofire.HTTPMethod,
                                  url: U) -> RequestManagerMapObjectsRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {

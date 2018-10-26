@@ -8,7 +8,7 @@
 
 import AlamoRecord
 
-class ApplicationURL: URLProtocol {
+class ApplicationURL: AlamoRecordURL {
 
     var absolute: String {
         return "https://jsonplaceholder.typicode.com/\(url)"
