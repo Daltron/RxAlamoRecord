@@ -6,17 +6,17 @@ PODS:
   - AlamofireObjectMapper (5.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.3)
-  - AlamoRecord (1.3.0):
+  - AlamoRecord (1.3.1):
     - AlamofireObjectMapper (~> 5.1)
   - KeyboardSpy (1.1)
   - MarqueeLabel/Swift (3.2.0)
-  - NotificationBannerSwift (1.7.1):
+  - NotificationBannerSwift (1.7.3):
     - MarqueeLabel/Swift (~> 3.2.0)
     - SnapKit (~> 4.0.1)
   - ObjectMapper (3.3.0)
-  - RxAlamoRecord (1.1.0):
+  - RxAlamoRecord (1.1.1):
     - Action (~> 3.8.0)
-    - AlamoRecord (~> 1.3.0)
+    - AlamoRecord (~> 1.3.1)
     - RxCocoa (~> 4.3.1)
     - RxSwift (~> 4.3.1)
   - RxCocoa (4.3.1):
@@ -52,16 +52,16 @@ SPEC CHECKSUMS:
   Action: 2275d04a407ecaf46a58d58a304388a28155a0a1
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
-  AlamoRecord: 55b4ce7f39214f45484c17ff8a7e8b2fa884e732
+  AlamoRecord: 323892836f7eb7c90a141b8c1fc96b879b99fdba
   KeyboardSpy: 4552ddd413d3b856b3b396422fccb8e1b3008524
   MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
-  NotificationBannerSwift: 5d0191ae57c4b38e484dab4912e32d1ed99fce61
+  NotificationBannerSwift: c9f4bc868d78df975ed59c0b2fccdbbe0e863efe
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  RxAlamoRecord: f23a10a2fb9d7ac8f941c281425ea74c9e4a1891
+  RxAlamoRecord: be81fafe2221e08026b6d1a4c923c438cc3f418f
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
 PODFILE CHECKSUM: 1d2a57324af4c69a3e4dbfd279710d360385e364
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.0.beta.2

@@ -1,7 +1,7 @@
 {
   "name": "RxAlamoRecord",
-  "version": "1.1.0",
-  "summary": "RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to create a networking layer that makes interacting with API's easier than ever reactively.",
+  "version": "1.1.1",
+  "summary": "An elegant Reactive wrapper around AlamoRecord.",
   "description": "RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to create a networking layer that makes interacting with API's easier than ever reactively.",
   "homepage": "https://github.com/Daltron/RxAlamoRecord",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Daltron/RxAlamoRecord.git",
-    "tag": "1.1.0"
+    "tag": "1.1.1"
   },
   "swift_version": "4.2",
   "platforms": {
@@ -26,7 +26,7 @@
   "requires_arc": true,
   "dependencies": {
     "AlamoRecord": [
-      "~> 1.3.0"
+      "~> 1.3.1"
     ],
     "RxSwift": [
       "~> 4.3.1"
