@@ -54,4 +54,13 @@ public extension Reactive {
                                  url: U) -> RequestManagerMapObjectsRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMapObjectsRequestData(requestManager: base, method: method, url: url)
     }
+    
+    /**
+     Creates request data for the upload() request that is to be executed.
+     - parameter url: The URL that conforms to AlamoRecordURL
+     */
+    public func upload<U, E, IDType>(url: U) -> RequestManagerUploadRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
+        return RequestManagerUploadRequestData(requestManager: base, method: .post, url: url)
+    }
+
 }

@@ -297,6 +297,10 @@
 		5B075599E7B3E83F208A9A9EFE140DFF /* ControlEvent+Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8A7DB187D339241BDB7E4D3E47C22 /* ControlEvent+Driver.swift */; };
 		5C14B93F6F13DD412239FED619AA198F /* NSTextStorage+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6265B98BFFF82DA3565FEC11EBB648B9 /* NSTextStorage+Rx.swift */; };
 		5C24970D1917F22CC0E69F1FF3E0F47C /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1A7A6F3AA6E3BB564757B3C4F0573A /* Timeout.swift */; };
+		5C5F9D2E220894E400B0B58B /* RequestManagerUploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D2D220894B600B0B58B /* RequestManagerUploadRequestData.swift */; };
+		5C5F9D2F220894E500B0B58B /* RequestManagerUploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D2D220894B600B0B58B /* RequestManagerUploadRequestData.swift */; };
+		5C5F9D312208952F00B0B58B /* UploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D302208952F00B0B58B /* UploadRequestData.swift */; };
+		5C5F9D322208952F00B0B58B /* UploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D302208952F00B0B58B /* UploadRequestData.swift */; };
 		5C9265DD40B08E611B52BAC7E23E804F /* VirtualTimeConverterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A6F205A9FDC57124495A2C0BCA4B1 /* VirtualTimeConverterType.swift */; };
 		5DE6481918E5DA25ABEBE1158E03F98E /* KeyboardSpy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5633ADA296AF2E3C781A46960DAC83DA /* KeyboardSpy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DE7E43A07F428E258EC8A020C13F544 /* Alamofire-iOS11.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB51D955D7B4FFD31C2AE70DF228A544 /* Alamofire-iOS11.2-dummy.m */; };
@@ -1328,6 +1332,8 @@
 		5B78C9A3B81F6B8197BC184AC35A9028 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		5C2CAABE4E6185166EA31108F5E387F3 /* UITextView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Rx.swift"; path = "RxCocoa/iOS/UITextView+Rx.swift"; sourceTree = "<group>"; };
 		5C3F5B1D0A68A39479AFA2A35E7C282F /* AlamoRecord-iOS9.3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "AlamoRecord-iOS9.3.modulemap"; path = "../AlamoRecord-iOS9.3/AlamoRecord-iOS9.3.modulemap"; sourceTree = "<group>"; };
+		5C5F9D2D220894B600B0B58B /* RequestManagerUploadRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerUploadRequestData.swift; sourceTree = "<group>"; };
+		5C5F9D302208952F00B0B58B /* UploadRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadRequestData.swift; path = RxAlamoRecord/Classes/UploadRequestData.swift; sourceTree = "<group>"; };
 		5C64408E34CF15F75FCABDDB27DC3024 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extensions.swift"; path = "Platform/DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
 		5C9A78E6D09C17423E8D1A8C843A764E /* Generate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generate.swift; path = RxSwift/Observables/Generate.swift; sourceTree = "<group>"; };
 		5D06F40A16531A8D585AC8DDDF779ABB /* KeyboardSpy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardSpy.swift; path = KeyboardSpy/Classes/KeyboardSpy.swift; sourceTree = "<group>"; };
@@ -1485,7 +1491,7 @@
 		9DB8D571CBF86A4A2E956218EE52E6A5 /* SerialDispatchQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerialDispatchQueueScheduler.swift; path = RxSwift/Schedulers/SerialDispatchQueueScheduler.swift; sourceTree = "<group>"; };
 		9DC4E1AA64C6E4FC22F84DDAB41EB4EA /* SharedSequence+Operators+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SharedSequence+Operators+arity.swift"; path = "RxCocoa/Traits/SharedSequence/SharedSequence+Operators+arity.swift"; sourceTree = "<group>"; };
 		9E8CA3E4712F4AC8AC454781F392BB8E /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
-		9EB632D16B783EE2C5D791634B4AA73E /* RxAlamoRecord.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RxAlamoRecord.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EB632D16B783EE2C5D791634B4AA73E /* RxAlamoRecord.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RxAlamoRecord.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		A0588E44152F1C74FC09C2FE9AB02FF0 /* Debug.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = RxSwift/Observables/Debug.swift; sourceTree = "<group>"; };
 		A092DE3ED828E33A25F6243F50A0EB9E /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extensions.swift"; path = "Platform/DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
 		A0EBB7F65398DB6413911CFBB8355A9D /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
@@ -2589,13 +2595,14 @@
 		B1E385B74CF7229E5D6E0AAB0F7F5854 /* RxAlamoRecord */ = {
 			isa = PBXGroup;
 			children = (
+				4C4FAF3BEC2975F91ADD83C1990679E0 /* AlamoRecordObject Data Classes */,
 				8FFAEAD16C7B9724A452F95C9E62FB73 /* AlamoRecordRelay.swift */,
 				900FE28E765F066EEC2D4236EE3FCDAB /* BaseRequestData.swift */,
-				4C4FAF3BEC2975F91ADD83C1990679E0 /* AlamoRecordObject Data Classes */,
 				55271DFEEC27476682E522B873F6D028 /* Extensions */,
 				10F0457556E5096693A1863B3EB3D710 /* Pod */,
 				BCCDDF6E7917AB06CC8CC314511ECAAF /* RequestManager Data Classes */,
 				FC602A419E7B99A25CFFA9EA6EF19227 /* Support Files */,
+				5C5F9D302208952F00B0B58B /* UploadRequestData.swift */,
 			);
 			name = RxAlamoRecord;
 			path = ../..;
@@ -2613,6 +2620,7 @@
 		BCCDDF6E7917AB06CC8CC314511ECAAF /* RequestManager Data Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5C5F9D2D220894B600B0B58B /* RequestManagerUploadRequestData.swift */,
 				BC9ADAB8C5BAE5A4584CB6576ECA6B72 /* RequestManagerMakeRequestData.swift */,
 				BF268D8FAE507195343CF7427E162F2B /* RequestManagerMapObjectRequestData.swift */,
 				49768C92B4067EF085CED9A31285451A /* RequestManagerMapObjectsRequestData.swift */,
@@ -4265,12 +4273,14 @@
 				66F2BC360CD36A0E17FF0BD0A9CEC5C5 /* AlamoRecordObjectRequestData.swift in Sources */,
 				708F30117166BFDE35BA0CCBA50F20BD /* AlamoRecordRelay.swift in Sources */,
 				BFD82F6B8DA780B6D53BE8F3A8C82A78 /* AllRequestData.swift in Sources */,
+				5C5F9D312208952F00B0B58B /* UploadRequestData.swift in Sources */,
 				477EF0B4C4B4C41C2A544A249A4EC71C /* BaseRequestData.swift in Sources */,
 				B4B3EAE7D727AD01076F4213732AF0F6 /* CreateRequestData.swift in Sources */,
 				71BB079D5F68A5B5F929AD594EB46BFA /* DestroyRequestData.swift in Sources */,
 				941B287B71ED612C219F92F82E7356D3 /* FindRequestData.swift in Sources */,
 				4319D2BC9BDB51928425AA78630F4C4F /* ObservableTypeExtension.swift in Sources */,
 				B7E144160C9599163B3212D80E827277 /* RequestManagerExtension.swift in Sources */,
+				5C5F9D2E220894E400B0B58B /* RequestManagerUploadRequestData.swift in Sources */,
 				81E74903F2EF21411B44651E0B804601 /* RequestManagerMakeRequestData.swift in Sources */,
 				935A9A381C3DC371F3C2FF9D97DF9862 /* RequestManagerMapObjectRequestData.swift in Sources */,
 				DE979B904FA69E97F3B645A54E97D33B /* RequestManagerMapObjectsRequestData.swift in Sources */,
@@ -4499,12 +4509,14 @@
 				C0567DDF04D3D0A3B6DD24B193561CA1 /* AlamoRecordObjectRequestData.swift in Sources */,
 				97EBF8B29689C39835F537D94FC7F3AF /* AlamoRecordRelay.swift in Sources */,
 				E2DE4F4FDE23BDAFADADD45DEA3DA486 /* AllRequestData.swift in Sources */,
+				5C5F9D322208952F00B0B58B /* UploadRequestData.swift in Sources */,
 				F32F181D74E4834009CB2C3C6C00A411 /* BaseRequestData.swift in Sources */,
 				53F63032AAE20D44A786C0E7110CB036 /* CreateRequestData.swift in Sources */,
 				ABC55BA846E58A4723E4A1C49EB5FE10 /* DestroyRequestData.swift in Sources */,
 				5E1B8600CC374D4D487B4ADA8E4E1DB2 /* FindRequestData.swift in Sources */,
 				0BBB2CDE68B1B6FD8C2680732581CA75 /* ObservableTypeExtension.swift in Sources */,
 				4B76C609FF3256CE452E98365998F0A5 /* RequestManagerExtension.swift in Sources */,
+				5C5F9D2F220894E500B0B58B /* RequestManagerUploadRequestData.swift in Sources */,
 				6F43F648FE8A4E12193D8EDFB05DB64A /* RequestManagerMakeRequestData.swift in Sources */,
 				8260411D1E188DD8E9AE6C3A50EE15A3 /* RequestManagerMapObjectRequestData.swift in Sources */,
 				D0A0100390EEA815DA6186D2CABC0F83 /* RequestManagerMapObjectsRequestData.swift in Sources */,
