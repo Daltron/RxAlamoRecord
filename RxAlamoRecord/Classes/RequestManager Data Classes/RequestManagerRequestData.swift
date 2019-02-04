@@ -19,7 +19,7 @@
 import Alamofire
 import AlamoRecord
 
-public class RequestManagerRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType>: BaseRequestData<U, E> {
+public class RequestManagerRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, IDType>: BaseRequestData<U, E> {
 
     internal typealias Data = (requestManager: RequestManager<U, E, IDType>,
         method: Alamofire.HTTPMethod,

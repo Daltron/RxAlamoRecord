@@ -19,7 +19,7 @@
 import Alamofire
 import AlamoRecord
 
-public class BaseRequestData<U: AlamoRecordURL, E: AlamoRecordError> {
+public class BaseRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError> {
 
     internal var parameters: Parameters?
     internal var encoding: ParameterEncoding = URLEncoding.default

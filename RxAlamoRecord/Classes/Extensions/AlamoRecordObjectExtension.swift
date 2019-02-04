@@ -19,7 +19,7 @@
 import AlamoRecord
 import RxSwift
 
-private typealias U = AlamoRecordURL
+private typealias U = AlamoRecord.URLProtocol
 private typealias E = AlamoRecordError
 
 public extension Reactive {
