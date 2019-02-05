@@ -18,7 +18,6 @@ public class RequestManagerUploadRequestData<U: AlamoRecordURL, E: AlamoRecordEr
     public func execute<T: Mappable>() -> Observable<T> {
         
         let requestManager = self.requestManager
-        let url = self.url
         let data = self.data
         let dataEntries = self.dataEntries
         
