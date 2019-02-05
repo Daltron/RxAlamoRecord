@@ -31,9 +31,7 @@ public class RequestManagerUploadRequestData<U: AlamoRecordURL, E: AlamoRecordEr
             }
         }
     
-        return Observable.create { [weak self] observer in
-      
-            guard let self = self else { return Disposables.create() }
+        return Observable.create { observer in
             
             requestManager.upload(url: data.url, keyPath: data.keyPath, headers: data.headers, multipartFormData: self.multipartFormData, success: { (object: T) in
                 observer.onNext(object)
