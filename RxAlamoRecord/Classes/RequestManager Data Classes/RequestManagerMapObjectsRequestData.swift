@@ -20,7 +20,7 @@ import AlamoRecord
 import RxSwift
 import ObjectMapper
 
-public class RequestManagerMapObjectsRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
+public class RequestManagerMapObjectsRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
 
     public func execute<T: Mappable>() -> Observable<[T]> {
         let data = self.data

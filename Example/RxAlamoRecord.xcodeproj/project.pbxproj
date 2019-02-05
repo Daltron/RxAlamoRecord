@@ -18,6 +18,10 @@
 		5C563A3C211CC80C0099C940 /* CommentsTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C563A3B211CC80C0099C940 /* CommentsTableViewHelper.swift */; };
 		5C563A41211DCA810099C940 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C563A3E211DCA810099C940 /* CreatePostView.swift */; };
 		5C563A42211DCA810099C940 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C563A3F211DCA810099C940 /* CreatePostViewController.swift */; };
+		5C5F9D3422090D7900B0B58B /* UploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D3322090D7900B0B58B /* UploadRequestData.swift */; };
+		5C5F9D3522090D7900B0B58B /* UploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D3322090D7900B0B58B /* UploadRequestData.swift */; };
+		5C5F9D3722090D9800B0B58B /* RequestManagerUploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D3622090D9800B0B58B /* RequestManagerUploadRequestData.swift */; };
+		5C5F9D3822090D9800B0B58B /* RequestManagerUploadRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F9D3622090D9800B0B58B /* RequestManagerUploadRequestData.swift */; };
 		5C6F4023211A1584001B99A4 /* BaseRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F4022211A1584001B99A4 /* BaseRequestData.swift */; };
 		5C6F402A211A1590001B99A4 /* FindRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F4024211A1590001B99A4 /* FindRequestData.swift */; };
 		5C6F402B211A1590001B99A4 /* AlamoRecordObjectRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F4025211A1590001B99A4 /* AlamoRecordObjectRequestData.swift */; };
@@ -97,6 +101,8 @@
 		5C563A3B211CC80C0099C940 /* CommentsTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewHelper.swift; sourceTree = "<group>"; };
 		5C563A3E211DCA810099C940 /* CreatePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		5C563A3F211DCA810099C940 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		5C5F9D3322090D7900B0B58B /* UploadRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadRequestData.swift; path = ../../RxAlamoRecord/Classes/UploadRequestData.swift; sourceTree = "<group>"; };
+		5C5F9D3622090D9800B0B58B /* RequestManagerUploadRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestManagerUploadRequestData.swift; path = "../../RxAlamoRecord/Classes/RequestManager Data Classes/RequestManagerUploadRequestData.swift"; sourceTree = "<group>"; };
 		5C6F4022211A1584001B99A4 /* BaseRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRequestData.swift; path = ../../RxAlamoRecord/Classes/BaseRequestData.swift; sourceTree = "<group>"; };
 		5C6F4024211A1590001B99A4 /* FindRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindRequestData.swift; path = "../../RxAlamoRecord/Classes/AlamoRecordObject Data Classes/FindRequestData.swift"; sourceTree = "<group>"; };
 		5C6F4025211A1590001B99A4 /* AlamoRecordObjectRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamoRecordObjectRequestData.swift; path = "../../RxAlamoRecord/Classes/AlamoRecordObject Data Classes/AlamoRecordObjectRequestData.swift"; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 				5C6F4036211A15A1001B99A4 /* RequestManagerMapObjectRequestData.swift */,
 				5C6F4035211A15A1001B99A4 /* RequestManagerMapObjectsRequestData.swift */,
 				5C6F4037211A15A1001B99A4 /* RequestManagerRequestData.swift */,
+				5C5F9D3622090D9800B0B58B /* RequestManagerUploadRequestData.swift */,
 			);
 			name = "RequestManager Data Classes";
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 			children = (
 				5C8A21BD211B6B8900FA05FF /* AlamoRecordRelay.swift */,
 				5C6F4022211A1584001B99A4 /* BaseRequestData.swift */,
+				5C5F9D3322090D7900B0B58B /* UploadRequestData.swift */,
 				5C6F3FFB2119EA7E001B99A4 /* AlamoRecordObject Data Classes */,
 				5C6F3FFC2119EA87001B99A4 /* Extensions */,
 				5C6F3FFD2119EA8B001B99A4 /* RequestManager Data Classes */,
@@ -590,9 +598,11 @@
 				5CAE0FC021211AAD002C9E3D /* DestroyRequestData.swift in Sources */,
 				5CAE0FC121211AAD002C9E3D /* FindRequestData.swift in Sources */,
 				5CAE0FBD21211AAD002C9E3D /* AlamoRecordObjectRequestData.swift in Sources */,
+				5C5F9D3822090D9800B0B58B /* RequestManagerUploadRequestData.swift in Sources */,
 				5CAE0FB821211A9C002C9E3D /* ApplicationError.swift in Sources */,
 				5CAE0FBF21211AAD002C9E3D /* CreateRequestData.swift in Sources */,
 				5CAE0FC321211AB7002C9E3D /* ObservableTypeExtension.swift in Sources */,
+				5C5F9D3522090D7900B0B58B /* UploadRequestData.swift in Sources */,
 				5CAE0FC621211ABD002C9E3D /* RequestManagerMakeRequestData.swift in Sources */,
 				5CAE0FBC21211AA5002C9E3D /* BaseRequestData.swift in Sources */,
 				5CAE0FBB21211AA5002C9E3D /* AlamoRecordRelay.swift in Sources */,
@@ -607,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5F9D3722090D9800B0B58B /* RequestManagerUploadRequestData.swift in Sources */,
 				5C6F402D211A1590001B99A4 /* DestroyRequestData.swift in Sources */,
 				5C563A3C211CC80C0099C940 /* CommentsTableViewHelper.swift in Sources */,
 				5C8A21C9211CBEDE00FA05FF /* PostsTableViewHelper.swift in Sources */,
@@ -639,6 +650,7 @@
 				5C8A21C5211CBE5C00FA05FF /* PostsView.swift in Sources */,
 				5C6F4023211A1584001B99A4 /* BaseRequestData.swift in Sources */,
 				5CF1D1BE2117F4F000878616 /* ApplicationError.swift in Sources */,
+				5C5F9D3422090D7900B0B58B /* UploadRequestData.swift in Sources */,
 				5C563A31211CC0210099C940 /* BaseTableViewCell.swift in Sources */,
 				5C6F402E211A1590001B99A4 /* UpdateRequestData.swift in Sources */,
 				5C563A42211DCA810099C940 /* CreatePostViewController.swift in Sources */,

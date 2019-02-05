@@ -14,7 +14,7 @@ PODS:
     - MarqueeLabel/Swift (~> 3.2.0)
     - SnapKit (~> 4.0.1)
   - ObjectMapper (3.3.0)
-  - RxAlamoRecord (1.1.1):
+  - RxAlamoRecord (1.2.0):
     - Action (~> 3.8.0)
     - AlamoRecord (~> 1.3.1)
     - RxCocoa (~> 4.3.1)
@@ -57,11 +57,11 @@ SPEC CHECKSUMS:
   MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
   NotificationBannerSwift: c9f4bc868d78df975ed59c0b2fccdbbe0e863efe
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  RxAlamoRecord: be81fafe2221e08026b6d1a4c923c438cc3f418f
+  RxAlamoRecord: 3ef3472ac22d28d10e0e2e8c00f9a90cf9daeeb1
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 1d2a57324af4c69a3e4dbfd279710d360385e364
+PODFILE CHECKSUM: 562908938d7ef10a3cd94c99e9db9a860283f03b
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.0.rc.2

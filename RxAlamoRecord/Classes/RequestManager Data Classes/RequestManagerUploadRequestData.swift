@@ -10,7 +10,7 @@ import AlamoRecord
 import ObjectMapper
 import RxSwift
 
-public class RequestManagerUploadRequestData<U: AlamoRecord.URLProtocol, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
+public class RequestManagerUploadRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
 
     private var multipartFormData: ((MultipartFormData) -> Void)!
     private var dataEntries: [UploadRequestData] = []
