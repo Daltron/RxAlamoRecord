@@ -1,6 +1,0 @@
-framework module AlamoRecord {
-  umbrella header "AlamoRecord-iOS11.2-umbrella.h"
-
-  export *
-  module * { export * }
-}

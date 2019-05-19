@@ -27,8 +27,8 @@ public extension ObservableType {
         - parameter to: Target AlamoRecordRelay for sequence elements.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    public func bind<Error: AlamoRecordError>(to relay: AlamoRecordRelay<E>?,
-                                              failure: Action<Error, Swift.Never>? = nil) -> Disposable {
+    func bind<Error: AlamoRecordError>(to relay: AlamoRecordRelay<Element>?,
+                                       failure: Action<Error, Swift.Never>? = nil) -> Disposable {
         return subscribe { e in
             switch e {
             case let .next(element):
@@ -46,16 +46,16 @@ public extension ObservableType {
         - parameter to: Target AlamoRecordRelay for sequence elements.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    public func bind<Error: AlamoRecordError>(to relay: AlamoRecordRelay<E?>?,
-                                              failure: Action<Error, Swift.Never>? = nil) -> Disposable {
-        return self.map { $0 as E? }.bind(to: relay, failure: failure)
+    func bind<Error: AlamoRecordError>(to relay: AlamoRecordRelay<Element?>?,
+                                       failure: Action<Error, Swift.Never>? = nil) -> Disposable {
+        return self.map { $0 as Element? }.bind(to: relay, failure: failure)
     }
     
     /**
         Creates new subscription that only cares about when an API request fails.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    public func bind<Error: AlamoRecordError>(failure: Action<Error, Swift.Never>) -> Disposable {
+    func bind<Error: AlamoRecordError>(failure: Action<Error, Swift.Never>) -> Disposable {
         return subscribe { e in
             switch e {
             case .next(_):
@@ -73,8 +73,8 @@ public extension ObservableType {
         - parameter to: Target Action for sequence elements.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    public func bind<Error: AlamoRecordError>(to action: Action<E, Swift.Never>? = nil,
-                                              failure: Action<Error, Swift.Never>? = nil) -> Disposable {
+    func bind<Error: AlamoRecordError>(to action: Action<Element, Swift.Never>? = nil,
+                                       failure: Action<Error, Swift.Never>? = nil) -> Disposable {
         return subscribe { e in
             switch e {
             case let .next(element):
@@ -92,8 +92,8 @@ public extension ObservableType {
         - parameter to: Target AlamoRecordRelay for sequence elements.
         - parameter valueOnFailure: If an API request fails, the AlamoRecordRelay object will be given this.
      */
-    public func bind(to relay: AlamoRecordRelay<E>?,
-                     valueOnFailure: E) -> Disposable {
+    func bind(to relay: AlamoRecordRelay<Element>?,
+              valueOnFailure: Element) -> Disposable {
         return subscribe { e in
             switch e {
             case let .next(element):
@@ -111,9 +111,9 @@ public extension ObservableType {
         - parameter to: Target AlamoRecordRelay for sequence elements.
         - parameter valueOnFailure: If an API request fails, the AlamoRecordRelay object will be given this.
      */
-    public func bind(to relay: AlamoRecordRelay<E?>?,
-                     valueOnFailure: E) -> Disposable {
-        return self.map { $0 as E? }.bind(to: relay, valueOnFailure: valueOnFailure)
+    func bind(to relay: AlamoRecordRelay<Element?>?,
+              valueOnFailure: Element) -> Disposable {
+        return self.map { $0 as Element? }.bind(to: relay, valueOnFailure: valueOnFailure)
     }
     
     /**
@@ -121,8 +121,8 @@ public extension ObservableType {
         - parameter to: Target Action for sequence elements.
         - parameter valueOnFailure: If an API request fails, the Action object will be given this.
      */
-    public func bind(to action: Action<E, Swift.Never>?,
-                     valueOnFailure: E) -> Disposable {
+    func bind(to action: Action<Element, Swift.Never>?,
+              valueOnFailure: Element) -> Disposable {
         return subscribe { e in
             switch e {
             case let .next(element):

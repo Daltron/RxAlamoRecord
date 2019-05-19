@@ -1,6 +1,6 @@
 {
   "name": "RxAlamoRecord",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "summary": "An elegant Reactive wrapper around AlamoRecord.",
   "description": "RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to create a networking layer that makes interacting with API's easier than ever reactively.",
   "homepage": "https://github.com/Daltron/RxAlamoRecord",
@@ -13,29 +13,29 @@
   },
   "source": {
     "git": "https://github.com/Daltron/RxAlamoRecord.git",
-    "tag": "1.2.0"
+    "tag": "1.4.0"
   },
-  "swift_version": "4.2",
+  "swift_version": "5.0",
   "platforms": {
-    "ios": "9.0",
-    "osx": "10.11",
-    "tvos": "9.0",
-    "watchos": "2.0"
+    "ios": "10.0",
+    "osx": "10.12",
+    "tvos": "10.0",
+    "watchos": "3.0"
   },
   "source_files": "RxAlamoRecord/Classes/**/*",
   "requires_arc": true,
   "dependencies": {
     "AlamoRecord": [
-      "~> 1.3.1"
+      "~> 1.4.0"
     ],
     "RxSwift": [
-      "~> 4.3.1"
+      "~> 5.0.0"
     ],
     "RxCocoa": [
-      "~> 4.3.1"
+      "~> 5.0.0"
     ],
     "Action": [
-      "~> 3.8.0"
+      "~> 4.0.0"
     ]
   }
 }

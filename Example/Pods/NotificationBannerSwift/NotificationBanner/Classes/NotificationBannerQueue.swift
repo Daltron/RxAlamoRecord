@@ -18,11 +18,13 @@
 
 import UIKit
 
-public enum QueuePosition {
+@objc
+public enum QueuePosition: Int {
     case back
     case front
 }
 
+@objcMembers
 open class NotificationBannerQueue: NSObject {
     
     /// The default instance of the NotificationBannerQueue
@@ -47,7 +49,7 @@ open class NotificationBannerQueue: NSObject {
         if queuePosition == .back {
             banners.append(banner)
             
-            if banners.index(of: banner) == 0 {
+            if banners.firstIndex(of: banner) == 0 {
                 banner.show(placeOnQueue: false, bannerPosition: banner.bannerPosition)
             }
             
@@ -81,7 +83,7 @@ open class NotificationBannerQueue: NSObject {
     func showNext(callback: ((_ isEmpty: Bool) -> Void)) {
 
         if !banners.isEmpty {
-          banners.removeFirst()
+            banners.removeFirst()
         }
         guard let banner = banners.first else {
             callback(true)

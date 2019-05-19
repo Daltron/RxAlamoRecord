@@ -24,6 +24,7 @@ import UIKit
     import MarqueeLabel
 #endif
 
+@objcMembers
 public class StatusBarNotificationBanner: BaseNotificationBanner {
 
     public override var bannerHeight: CGFloat {
@@ -44,8 +45,8 @@ public class StatusBarNotificationBanner: BaseNotificationBanner {
         super.init(style: style, colors: colors)
 
         titleLabel = MarqueeLabel()
-        titleLabel?.animationDelay = 2
-        titleLabel?.type = .leftRight
+        (titleLabel as! MarqueeLabel).animationDelay = 2
+        (titleLabel as! MarqueeLabel).type = .leftRight
         titleLabel!.font = UIFont.systemFont(ofSize: 12.5, weight: UIFont.Weight.bold)
         titleLabel!.textAlignment = .center
         titleLabel!.textColor = .white
@@ -89,4 +90,20 @@ public class StatusBarNotificationBanner: BaseNotificationBanner {
         super.init(coder: aDecoder)
     }
 
+}
+
+public extension StatusBarNotificationBanner {
+    
+    func applyStyling(titleColor: UIColor? = nil,
+                      titleTextAlign: NSTextAlignment? = nil) {
+        
+        if let titleColor = titleColor {
+            titleLabel!.textColor = titleColor
+        }
+        
+        if let titleTextAlign = titleTextAlign {
+            titleLabel!.textAlignment = titleTextAlign
+        }
+    }
+    
 }

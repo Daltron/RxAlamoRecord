@@ -30,7 +30,7 @@ public extension Reactive {
         - parameter method: The HTTP method
         - parameter url: The URL that conforms to AlamoRecordURL
      */
-    public func makeRequest<U, E, IDType>(_ method: Alamofire.HTTPMethod,
+    func makeRequest<U, E, IDType>(_ method: Alamofire.HTTPMethod,
                                   url: U) -> RequestManagerMakeRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMakeRequestData(requestManager: base, method: method, url: url)
     }
@@ -40,7 +40,7 @@ public extension Reactive {
         - parameter method: The HTTP method
         - parameter url: The URL that conforms to AlamoRecordURL
      */
-    public func mapObject<U, E, IDType>(_ method: Alamofire.HTTPMethod,
+    func mapObject<U, E, IDType>(_ method: Alamofire.HTTPMethod,
                                 url: U) -> RequestManagerMapObjectRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMapObjectRequestData(requestManager: base, method: method, url: url)
     }
@@ -50,7 +50,7 @@ public extension Reactive {
         - parameter method: The HTTP method
         - parameter url: The URL that conforms to AlamoRecordURL
      */
-    public func mapObjects<U, E, IDType>(_ method: Alamofire.HTTPMethod,
+    func mapObjects<U, E, IDType>(_ method: Alamofire.HTTPMethod,
                                  url: U) -> RequestManagerMapObjectsRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMapObjectsRequestData(requestManager: base, method: method, url: url)
     }
@@ -59,7 +59,7 @@ public extension Reactive {
      Creates request data for the upload() request that is to be executed.
      - parameter url: The URL that conforms to AlamoRecordURL
      */
-    public func upload<U, E, IDType>(url: U) -> RequestManagerUploadRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
+    func upload<U, E, IDType>(url: U) -> RequestManagerUploadRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerUploadRequestData(requestManager: base, method: .post, url: url)
     }
 

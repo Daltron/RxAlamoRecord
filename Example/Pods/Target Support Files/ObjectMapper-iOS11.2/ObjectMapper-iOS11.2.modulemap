@@ -1,6 +1,0 @@
-framework module ObjectMapper {
-  umbrella header "ObjectMapper-iOS11.2-umbrella.h"
-
-  export *
-  module * { export * }
-}
