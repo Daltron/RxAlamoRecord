@@ -10,7 +10,7 @@ import AlamoRecord
 
 class ApplicationRequestManager: RequestManager<ApplicationURL, ApplicationError, Int> {
    
-    static var shared = ApplicationRequestManager()
+    static let shared = ApplicationRequestManager()
     
     init() {
         super.init(configuration: Configuration())

@@ -7,15 +7,16 @@
 
 import Alamofire
 import AlamoRecord
-import ObjectMapper
 import RxSwift
 
-public class RequestManagerUploadRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
+public class RequestManagerUploadRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable>: RequestManagerRequestData<Url, ARError, IDType> {
 
     private var multipartFormData: ((MultipartFormData) -> Void)!
     private var dataEntries: [UploadRequestData] = []
     
-    public func execute<T: Mappable>() -> Observable<T> {
+    public func execute<C: Codable>() -> Observable<C> {
         
         let requestManager = self.requestManager
         let data = self.data
@@ -33,10 +34,10 @@ public class RequestManagerUploadRequestData<U: AlamoRecordURL, E: AlamoRecordEr
     
         return Observable.create { observer in
             
-            requestManager.upload(url: data.url, keyPath: data.keyPath, headers: data.headers, multipartFormData: self.multipartFormData, success: { (object: T) in
+            requestManager.upload(url: data.url, keyPath: data.keyPath, headers: data.headers, multipartFormData: self.multipartFormData, success: { (object: C) in
                 observer.onNext(object)
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             

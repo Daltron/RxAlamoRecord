@@ -2,21 +2,17 @@ PODS:
   - Action (4.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - Alamofire (4.8.2)
-  - AlamofireObjectMapper (5.1.0):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 3.3)
-  - AlamoRecord (1.4.0):
-    - AlamofireObjectMapper (= 5.1.0)
+  - Alamofire (5.0.0-beta.6)
+  - AlamoRecord (2.0.1):
+    - Alamofire (= 5.0.0-beta.6)
   - KeyboardSpy (1.1)
   - MarqueeLabel (4.0.0)
   - NotificationBannerSwift (2.2.0):
     - MarqueeLabel (~> 4.0.0)
     - SnapKit (~> 5.0.0)
-  - ObjectMapper (3.4.2)
-  - RxAlamoRecord (1.4.0):
+  - RxAlamoRecord (2.0.0):
     - Action (~> 4.0.0)
-    - AlamoRecord (~> 1.4.0)
+    - AlamoRecord (~> 2.0.1)
     - RxCocoa (~> 5.0.0)
     - RxSwift (~> 5.0.0)
   - RxCocoa (5.0.0):
@@ -37,12 +33,10 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Action
     - Alamofire
-    - AlamofireObjectMapper
     - AlamoRecord
     - KeyboardSpy
     - MarqueeLabel
     - NotificationBannerSwift
-    - ObjectMapper
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -54,14 +48,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Action: 0d14986aad0f1330aa27ce65d0cdeaacbb63d91c
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
-  AlamoRecord: f7ff85c04c4637a1d3ceb916bb079e1e2311f232
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  AlamoRecord: 769d29845bf839def89c8815c6592db0cc320fd3
   KeyboardSpy: 4552ddd413d3b856b3b396422fccb8e1b3008524
   MarqueeLabel: b55b26e690b6ad41faedd95cbf5eae6f1d1735b4
   NotificationBannerSwift: 0ebb4b35e18c0515fdfe01b5ebd90c3eb1255e3d
-  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  RxAlamoRecord: c6ddfb0a4cb90b132f943bfefd5dc94df330e60a
+  RxAlamoRecord: 87bff579cbce9708b931ced6c98bff83aec0fe98
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
@@ -69,4 +61,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 13b623d63dca695e43c8299c13f3149e9f130798
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.1

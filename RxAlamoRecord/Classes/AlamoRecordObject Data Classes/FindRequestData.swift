@@ -22,7 +22,10 @@ import AlamoRecord
 import RxSwift
 import RxCocoa
 
-public class FindRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T:AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
+public class FindRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable,
+    Object: AlamoRecordObject<Url, ARError, IDType>>: AlamoRecordObjectRequestData<Url, ARError, IDType, Object> {
 
     let id: IDType
     
@@ -33,17 +36,17 @@ public class FindRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T:A
     /**
         Executes the request immediately.
      */
-    public func execute() -> Observable<T> {
+    public func execute() -> Observable<Object> {
         
         let id = self.id
         let data = self.data
         
         return Observable.create { observer in
             
-            T.find(id: id, parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: T) in
+            Object.find(id: id, parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: Object) in
                 observer.onNext(object)
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 
                 observer.onError(error)
             })

@@ -20,19 +20,22 @@ import Alamofire
 import AlamoRecord
 import RxSwift
 
-public class AllRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T: AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
+public class AllRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable,
+    Object: AlamoRecordObject<Url, ARError, IDType>>: AlamoRecordObjectRequestData<Url, ARError, IDType, Object> {
 
     /**
         Executes the request immediately.
      */
-    public func execute() -> Observable<[T]> {
+    public func execute() -> Observable<[Object]> {
         
         return Observable.create { observer in
             
-            T.all(success: { (objects: [T]) in
+            Object.all(success: { (objects: [Object]) in
                 observer.onNext(objects)
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             

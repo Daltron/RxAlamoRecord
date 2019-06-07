@@ -20,12 +20,15 @@ import Alamofire
 import AlamoRecord
 import RxSwift
 
-public class UpdateRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T: AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
+public class UpdateRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable,
+    Object: AlamoRecordObject<Url, ARError, IDType>>: AlamoRecordObjectRequestData<Url, ARError, IDType, Object> {
 
     let id: IDType
-    let type: AlamoRecordObject<U, E, IDType>.Type
+    let type: AlamoRecordObject<Url, ARError, IDType>.Type
     
-    init(id: IDType, type: AlamoRecordObject<U, E, IDType>.Type) {
+    init(id: IDType, type: AlamoRecordObject<Url, ARError, IDType>.Type) {
         self.id = id
         self.type = type
     }
@@ -33,17 +36,17 @@ public class UpdateRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T
     /**
         Executes the request immediately.
      */
-    public func execute() -> Observable<T> {
+    public func execute() -> Observable<Object> {
         
         let id = self.id
         let data = self.data
         
         return Observable.create { observer in
             
-            T.update(id: id, parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: T) in
+            Object.update(id: id, parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: Object) in
                 observer.onNext(object)
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             
@@ -66,7 +69,7 @@ public class UpdateRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T
             type.update(id: id, parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: {
                 observer.onNext(())
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             

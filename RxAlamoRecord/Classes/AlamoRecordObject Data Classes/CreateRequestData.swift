@@ -20,21 +20,24 @@ import Alamofire
 import AlamoRecord
 import RxSwift
 
-public class CreateRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T: AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
+public class CreateRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable,
+    Object: AlamoRecordObject<Url, ARError, IDType>>: AlamoRecordObjectRequestData<Url, ARError, IDType, Object> {
 
     /**
         Executes the request immediately.
      */
-    public func execute() -> Observable<T> {
+    public func execute() -> Observable<Object> {
         
         let data = self.data
         
         return Observable.create { observer in
             
-            T.create(parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: T) in
+            Object.create(parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: Object) in
                 observer.onNext(object)
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             
@@ -52,10 +55,10 @@ public class CreateRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T
         
         return Observable.create { observer in
             
-            T.create(parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: T) in
+            Object.create(parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: { (object: Object) in
                 observer.onNext(())
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             

@@ -31,7 +31,7 @@ public extension Reactive {
         - parameter url: The URL that conforms to AlamoRecordURL
      */
     func makeRequest<U, E, IDType>(_ method: Alamofire.HTTPMethod,
-                                  url: U) -> RequestManagerMakeRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
+                                   url: U) -> RequestManagerMakeRequestData<U, E, IDType> where Base: RequestManager<U, E, IDType> {
         return RequestManagerMakeRequestData(requestManager: base, method: method, url: url)
     }
     

@@ -19,57 +19,54 @@
 import AlamoRecord
 import RxSwift
 
-private typealias U = AlamoRecordURL
-private typealias E = AlamoRecordError
-
 public extension Reactive {
     
     /**
        Creates request data for the AlamoRecordObject.all() request that is to be executed.
      */
-    static func all<U, E, IDType>() -> AllRequestData<U, E, IDType, Base> where Base: AlamoRecordObject<U, E, IDType> {
+    static func all<Url, ARError, IDType>() -> AllRequestData<Url, ARError, IDType, Base> where Base: AlamoRecordObject<Url, ARError, IDType> {
         return AllRequestData()
     }
     
     /**
      Creates request data for the AlamoRecordObject.find(id: Any) request that is to be executed.
      */
-    static func find<U, E, IDType>(id: IDType) -> FindRequestData<U, E, IDType, Base> where Base: AlamoRecordObject<U, E, IDType> {
+    static func find<Url, ARError, IDType>(id: IDType) -> FindRequestData<Url, ARError, IDType, Base> where Base: AlamoRecordObject<Url, ARError, IDType> {
         return FindRequestData(id: id)
     }
     
     /**
         Creates request data for the AlamoRecordObject.create() request that is to be executed.
      */
-    static func create<U, E, IDType>() -> CreateRequestData<U, E, IDType, Base> where Base: AlamoRecordObject<U, E, IDType> {
+    static func create<Url, ARError, IDType>() -> CreateRequestData<Url, ARError, IDType, Base> where Base: AlamoRecordObject<Url, ARError, IDType> {
         return CreateRequestData()
     }
     
     /**
         Creates request data for the AlamoRecordObject.update(id: Any) request that is to be executed.
      */
-    static func update<U, E, IDType>(id: IDType) -> UpdateRequestData<U, E, IDType, Base> where Base: AlamoRecordObject<U, E, IDType> {
+    static func update<Url, ARError, IDType>(id: IDType) -> UpdateRequestData<Url, ARError, IDType, Base> where Base: AlamoRecordObject<Url, ARError, IDType> {
         return UpdateRequestData(id: id, type: Base.self)
     }
     
     /**
         Creates request data for the alamoRecordObject.update(id: Any) request that is to be executed.
      */
-    func update<U, E, IDType>() -> UpdateRequestData<U, E, IDType, Base> where Base: AlamoRecordObject<U, E, IDType> {
+    func update<Url, ARError, IDType>() -> UpdateRequestData<Url, ARError, IDType, Base> where Base: AlamoRecordObject<Url, ARError, IDType> {
         return UpdateRequestData(id: base.id, type: Base.self)
     }
     
     /**
         Creates request data for the AlamoRecordObject.destroy(id: Any) request that is to be executed.
      */
-    static func destroy<U, E, IDType>(id: IDType) -> DestroyRequestData<U, E, IDType, Base> where Base: AlamoRecordObject<U, E, IDType> {
+    static func destroy<Url, ARError, IDType>(id: IDType) -> DestroyRequestData<Url, ARError, IDType, Base> where Base: AlamoRecordObject<Url, ARError, IDType> {
         return DestroyRequestData(id: id, type: Base.self)
     }
     
     /**
         Creates request data for the alamoRecordObject.destroy(id: Any) request that is to be executed.
      */
-    func destroy<U, E, IDType>() -> DestroyRequestData<U, E, IDType, Base> where Base: AlamoRecordObject<U, E, IDType> {
+    func destroy<Url, ARError, IDType>() -> DestroyRequestData<Url, ARError, IDType, Base> where Base: AlamoRecordObject<Url, ARError, IDType> {
         return DestroyRequestData(id: base.id, type: Base.self)
     }
 

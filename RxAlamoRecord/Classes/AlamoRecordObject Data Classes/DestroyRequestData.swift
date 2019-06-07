@@ -20,12 +20,15 @@ import Alamofire
 import AlamoRecord
 import RxSwift
 
-public class DestroyRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T:AlamoRecordObject<U, E, IDType>>: AlamoRecordObjectRequestData<U, E, IDType, T> {
+public class DestroyRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable,
+    Object: AlamoRecordObject<Url, ARError, IDType>>: AlamoRecordObjectRequestData<Url, ARError, IDType, Object> {
 
     let id: IDType
-    let type: AlamoRecordObject<U, E, IDType>.Type
+    let type: AlamoRecordObject<Url, ARError, IDType>.Type
     
-    init(id: IDType, type: AlamoRecordObject<U, E, IDType>.Type) {
+    init(id: IDType, type: AlamoRecordObject<Url, ARError, IDType>.Type) {
         self.id = id
         self.type = type
     }
@@ -44,7 +47,7 @@ public class DestroyRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, 
             type.destroy(id: id, parameters: data.parameters, encoding: data.encoding, headers: data.headers, success: {
                 observer.onNext(())
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             

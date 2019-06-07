@@ -19,7 +19,10 @@
 import Alamofire
 import AlamoRecord
 
-public class AlamoRecordObjectRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType, T: AlamoRecordObject<U, E, IDType>>: BaseRequestData<U, E> {
+public class AlamoRecordObjectRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable,
+    Object: AlamoRecordObject<Url, ARError, IDType>>: BaseRequestData<Url, ARError> {
     
     internal typealias Data = (parameters: Parameters?, encoding: ParameterEncoding, headers: HTTPHeaders?)
     

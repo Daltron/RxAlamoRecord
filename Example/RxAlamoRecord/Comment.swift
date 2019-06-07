@@ -1,27 +1,31 @@
 
 import AlamoRecord
-import ObjectMapper
 
-class Comment: ApplicationObject {
+class Comment: AlamoRecordObject<ApplicationURL, ApplicationError, Int> {
+    
+    let name: String
+    let email: String
+    let body: String
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decode(String.self, forKey: .name)
+        email = try container.decode(String.self, forKey: .email)
+        body = try container.decode(String.self, forKey: .body)
+        try super.init(from: decoder)
+    }
+    
+    class override var requestManager: ApplicationRequestManager {
+        return ApplicationRequestManager.shared
+    }
     
     override class var root: String {
         return "comment"
     }
     
-    private(set) var postId: Int!
-    private(set) var name: String!
-    private(set) var email: String!
-    private(set) var body: String!
-    
-    required init?(map: Map) {
-        super.init(map: map)
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        postId <- map["postId"]
-        name <- map["name"]
-        email <- map["email"]
-        body <- map["body"]
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case email
+        case body
     }
 }

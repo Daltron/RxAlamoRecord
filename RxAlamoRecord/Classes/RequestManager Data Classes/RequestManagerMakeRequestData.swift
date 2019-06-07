@@ -19,7 +19,9 @@
 import AlamoRecord
 import RxSwift
 
-public class RequestManagerMakeRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
+public class RequestManagerMakeRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable>: RequestManagerRequestData<Url, ARError, IDType> {
     
     public func execute() -> Observable<Void> {
         
@@ -36,7 +38,7 @@ public class RequestManagerMakeRequestData<U: AlamoRecordURL, E: AlamoRecordErro
                                             success: {
                 observer.onNext(())
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             

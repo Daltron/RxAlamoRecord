@@ -18,11 +18,12 @@
 
 import AlamoRecord
 import RxSwift
-import ObjectMapper
 
-public class RequestManagerMapObjectsRequestData<U: AlamoRecordURL, E: AlamoRecordError, IDType>: RequestManagerRequestData<U, E, IDType> {
+public class RequestManagerMapObjectsRequestData<Url: AlamoRecordURL,
+    ARError: AlamoRecordError,
+    IDType: Codable>: RequestManagerRequestData<Url, ARError, IDType> {
 
-    public func execute<T: Mappable>() -> Observable<[T]> {
+    public func execute<C: Codable>() -> Observable<[C]> {
         let data = self.data
         
         return Observable.create { observer in
@@ -33,10 +34,10 @@ public class RequestManagerMapObjectsRequestData<U: AlamoRecordURL, E: AlamoReco
                                            keyPath: data.keyPath,
                                            encoding: data.encoding,
                                            headers: data.headers,
-                                           success: { (objects: [T]) in
+                                           success: { (objects: [C]) in
                 observer.onNext(objects)
                 observer.onCompleted()
-            }, failure: { (error: E) in
+            }, failure: { (error: ARError) in
                 observer.onError(error)
             })
             

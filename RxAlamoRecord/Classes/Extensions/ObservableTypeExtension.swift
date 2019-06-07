@@ -27,14 +27,14 @@ public extension ObservableType {
         - parameter to: Target AlamoRecordRelay for sequence elements.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    func bind<Error: AlamoRecordError>(to relay: AlamoRecordRelay<Element>?,
-                                       failure: Action<Error, Swift.Never>? = nil) -> Disposable {
+    func bind<ARError: AlamoRecordError>(to relay: AlamoRecordRelay<Element>?,
+                                         failure: Action<ARError, Swift.Never>? = nil) -> Disposable {
         return subscribe { e in
             switch e {
             case let .next(element):
                 relay?.accept(element)
             case let .error(error):
-                failure?.execute(error as? Error ?? Error())
+                failure?.execute(error as? ARError ?? ARError(error: error))
             case .completed:
                 break
             }
@@ -46,8 +46,8 @@ public extension ObservableType {
         - parameter to: Target AlamoRecordRelay for sequence elements.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    func bind<Error: AlamoRecordError>(to relay: AlamoRecordRelay<Element?>?,
-                                       failure: Action<Error, Swift.Never>? = nil) -> Disposable {
+    func bind<ARError: AlamoRecordError>(to relay: AlamoRecordRelay<Element?>?,
+                                         failure: Action<ARError, Swift.Never>? = nil) -> Disposable {
         return self.map { $0 as Element? }.bind(to: relay, failure: failure)
     }
     
@@ -55,13 +55,13 @@ public extension ObservableType {
         Creates new subscription that only cares about when an API request fails.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    func bind<Error: AlamoRecordError>(failure: Action<Error, Swift.Never>) -> Disposable {
+    func bind<ARError: AlamoRecordError>(failure: Action<ARError, Swift.Never>) -> Disposable {
         return subscribe { e in
             switch e {
             case .next(_):
                 break
             case let .error(error):
-                failure.execute(error as? Error ?? Error())
+                failure.execute(error as? ARError ?? ARError(error: error))
             case .completed:
                 break
             }
@@ -73,14 +73,14 @@ public extension ObservableType {
         - parameter to: Target Action for sequence elements.
         - parameter failure: Action that will be executed if the API request fails.
      */
-    func bind<Error: AlamoRecordError>(to action: Action<Element, Swift.Never>? = nil,
-                                       failure: Action<Error, Swift.Never>? = nil) -> Disposable {
+    func bind<ARError: AlamoRecordError>(to action: Action<Element, Swift.Never>? = nil,
+                                         failure: Action<ARError, Swift.Never>? = nil) -> Disposable {
         return subscribe { e in
             switch e {
             case let .next(element):
                 action?.execute(element)
             case let .error(error):
-                failure?.execute(error as? Error ?? Error())
+                failure?.execute(error as? ARError ?? ARError(error: error))
             case .completed:
                 break
             }
