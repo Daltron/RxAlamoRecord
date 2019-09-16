@@ -1,7 +1,7 @@
 ![RxAlamoRecord](https://github.com/Daltron/RxAlamoRecord/blob/master/RxAlamoRecord/Assets/rx_alamorecord.png?raw=true)
 
 [![Version](https://img.shields.io/cocoapods/v/RxAlamoRecord.svg?style=flat)](http://cocoapods.org/pods/RxAlamoRecord)
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift-5-4BC51D.svg?style=flat" alt="Language: Swift" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift-5.1-4BC51D.svg?style=flat" alt="Language: Swift" /></a>
 [![Platform](https://img.shields.io/cocoapods/p/RxAlamoRecord.svg?style=flat)](http://cocoapods.org/pods/RxAlamoRecord)
 [![License](https://img.shields.io/cocoapods/l/RxAlamoRecord.svg?style=flat)](http://cocoapods.org/pods/RxAlamoRecord)
 
@@ -14,7 +14,7 @@ RxAlamoRecord combines the power of the [AlamoRecord](https://github.com/tunespe
 
 - iOS 10.0+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0+
 - Xcode 10.2+
-- Swift 5
+- Swift 5.1
 
 ## Installation
 
