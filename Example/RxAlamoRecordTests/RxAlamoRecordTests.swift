@@ -106,10 +106,8 @@ class RxAlamoRecordTests: XCTestCase {
             self?.expectation.fulfill()
         }
         
-        let post = Post(JSON: ["id": 1,
-                               "userId": 1,
-                               "title": "Title placeholder",
-                               "body": "Body placeholder"])!
+        let data = try! JSONEncoder().encode(["id": 1, "userId": 1, "title": "Title placeholder", "body": "Body placeholder"])
+        let post = try! JSONDecoder().decode(Post.self, from: data)
         
         post.rx
             .update()
@@ -140,7 +138,8 @@ class RxAlamoRecordTests: XCTestCase {
             return Observable.empty()
         }
         
-        let post = Post(JSON: ["id": 1])!
+        let data = try! JSONEncoder().encode(["id": 1, "userId": 1, "title": "Title placeholder", "body": "Body placeholder"])
+        let post = try! JSONDecoder().decode(Post.self, from: data)
         
         post.rx
             .destroy()
@@ -151,9 +150,11 @@ class RxAlamoRecordTests: XCTestCase {
     
     func testThatDefaultValueExtensionMethodAssignsDefaultValueToPostOnFailure() {
         
-        let defaultPost = Post(JSON: ["id": 2])!
+        let data = try! JSONEncoder().encode(["id": 1, "userId": 1, "title": "Title placeholder", "body": "Body placeholder"])
+        let defaultPost = try! JSONDecoder().decode(Post.self, from: data)
+        
         postSubscriptionBlock = { [weak self] post in
-            XCTAssert(post.id as! Int == 2)
+            XCTAssert(post.id == 2)
             self?.expectation.fulfill()
         }
         
@@ -168,4 +169,20 @@ class RxAlamoRecordTests: XCTestCase {
         wait(for: [expectation], timeout: 60.0)
     }
     
+}
+
+private extension JSONEncoder {
+    
+    private struct EncodableWrapper: Encodable {
+        let wrapped: Encodable
+        
+        func encode(to encoder: Encoder) throws {
+            try self.wrapped.encode(to: encoder)
+        }
+    }
+    
+    func encode<Key: Encodable>(_ dictionary: [Key: Encodable]) throws -> Data {
+        let wrappedDict = dictionary.mapValues(EncodableWrapper.init(wrapped:))
+        return try self.encode(wrappedDict)
+    }
 }
