@@ -34,7 +34,6 @@ public class RequestManagerMakeRequestData<Url: AlamoRecordURL,
                                             parameters: data.parameters,
                                             encoding: data.encoding,
                                             headers: data.headers,
-                                            emptyBody: data.emptyBody,
                                             success: {
                 observer.onNext(())
                 observer.onCompleted()

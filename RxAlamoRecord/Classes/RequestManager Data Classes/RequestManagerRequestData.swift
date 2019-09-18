@@ -29,18 +29,16 @@ public class RequestManagerRequestData<Url: AlamoRecordURL,
         parameters: Parameters?,
         encoding: ParameterEncoding,
         headers: HTTPHeaders?,
-        keyPath: String?,
-        emptyBody: Bool)
+        keyPath: String?)
     
     internal var data: Data {
-        return (requestManager, method, url, parameters, encoding, headers, keyPath, emptyBody)
+        return (requestManager, method, url, parameters, encoding, headers, keyPath)
     }
     
     internal let requestManager: RequestManager<Url, ARError, IDType>
     internal let method: Alamofire.HTTPMethod
     internal let url: Url
     internal var keyPath: String?
-    internal var emptyBody: Bool = false
     
     init(requestManager: RequestManager<Url, ARError, IDType>, method: Alamofire.HTTPMethod, url: Url) {
         self.requestManager = requestManager
@@ -51,11 +49,6 @@ public class RequestManagerRequestData<Url: AlamoRecordURL,
     
     public func withKeyPath(_ keyPath: String?) -> Self {
         self.keyPath = keyPath
-        return self
-    }
-    
-    public func withEmptyBody(_ emptyBody: Bool) -> Self {
-        self.emptyBody = emptyBody
         return self
     }
 
