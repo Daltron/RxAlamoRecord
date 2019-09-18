@@ -22,7 +22,7 @@ RxAlamoRecord combines the power of the AlamoRecord and RxSwift libraries to cre
   s.source_files = 'RxAlamoRecord/Classes/**/*'
   s.requires_arc = true
 
-  s.dependency 'AlamoRecord', '~> 2.1.0'
+  s.dependency 'AlamoRecord', '~> 2.2.0'
   s.dependency 'RxSwift', '~> 5.0.0'
   s.dependency 'RxCocoa', '~> 5.0.0'
   s.dependency 'Action', '~> 4.0.0'
