@@ -24,11 +24,10 @@ public class RequestManagerUploadRequestData<Url: AlamoRecordURL,
         
         self.multipartFormData = { (data: MultipartFormData) in
             for entry in dataEntries {
-                if let fileName = entry.fileName, let mimeType = entry.mimeType {
-                    data.append(entry.data, withName: entry.name, fileName: fileName, mimeType: mimeType)
-                } else {
-                    data.append(entry.data, withName: entry.name)
-                }
+                data.append(entry.data,
+                            withName: entry.name,
+                            fileName: entry.fileName,
+                            mimeType: entry.mimeType)
             }
         }
     

@@ -16,17 +16,11 @@ public class UploadRequestData {
     let fileName: String?
     let mimeType: String?
 
-    public init(name: String, data: Data) {
-        self.name = name
-        self.data = data
-        self.fileName = nil
-        self.mimeType = nil
-    }
-    
-    public init(name: String, data: Data, fileName: String, mimeType: String) {
+    public init(name: String, data: Data, fileName: String? = nil, mimeType: String? = nil) {
         self.name = name
         self.data = data
         self.fileName = fileName
         self.mimeType = mimeType
     }
+
 }

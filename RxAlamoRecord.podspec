@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxAlamoRecord'
-  s.version          = '2.2.1'
+  s.version          = '2.2.2'
   s.summary          = 'An elegant Reactive wrapper around AlamoRecord.'
 
   s.description      = <<-DESC
