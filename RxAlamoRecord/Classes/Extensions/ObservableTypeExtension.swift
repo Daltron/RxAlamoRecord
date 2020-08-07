@@ -34,7 +34,9 @@ public extension ObservableType {
             case let .next(element):
                 relay?.accept(element)
             case let .error(error):
-                failure?.execute(error as? ARError ?? ARError(error: error))
+                let statusCode = error.asAFError?.responseCode
+                let arError = error as? ARError ?? ARError(error: error, statusCode: statusCode)
+                failure?.execute(arError)
             case .completed:
                 break
             }
@@ -61,7 +63,9 @@ public extension ObservableType {
             case .next(_):
                 break
             case let .error(error):
-                failure.execute(error as? ARError ?? ARError(error: error))
+                let statusCode = error.asAFError?.responseCode
+                let arError = error as? ARError ?? ARError(error: error, statusCode: statusCode)
+                failure.execute(arError)
             case .completed:
                 break
             }
@@ -80,7 +84,9 @@ public extension ObservableType {
             case let .next(element):
                 action?.execute(element)
             case let .error(error):
-                failure?.execute(error as? ARError ?? ARError(error: error))
+                let statusCode = error.asAFError?.responseCode
+                let arError = error as? ARError ?? ARError(error: error, statusCode: statusCode)
+                failure?.execute(arError)
             case .completed:
                 break
             }
